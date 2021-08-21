@@ -81,8 +81,9 @@ def main():
             master=window,
             height=500,
             width=500,
-            image=welcomeMessage)
-    welcome_label.place(x = 50, y=10)
+            image=welcomeMessage,
+            background="#00EDA6")
+    welcome_label.place(x = 50, y=100)
 
     window.mainloop()
 if __name__ == '__main__':
