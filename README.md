@@ -7,3 +7,6 @@
 <li> Generates QR Code for given file </li>
 <li> Reads the QR Code and generates output DataFile </li>
 </ul>
+
+Haven't Completed yet... 
+Will be ready soon
