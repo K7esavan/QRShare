@@ -22,3 +22,15 @@
   
   Select the QR image ('png', 'jpg' or 'jpeg' format) and an infomation
   box pop up and display the data in that QR image.
+
+## INSTALLATION
+
+#### Windows
+  Portable .exe file is located in ./EXE-Windows folder 
+
+#### From Source
+  run the __init__.py file
+
+  <pre>
+    python __init__.py
+  </pre>
