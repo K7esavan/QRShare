@@ -26,7 +26,7 @@
 ## INSTALLATION
 
 #### From Source
-  <pre>
-    pip install -r requirements.txt
-    python qrshare.py
-  </pre>
+<pre>
+pip install -r requirements.txt
+python qrshare.py
+</pre>
