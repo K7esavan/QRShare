@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import filedialog
 import PIL
@@ -44,9 +43,9 @@ def main():
     # For getting input
     canvas.create_rectangle(707.0, 0.0, 1395.0, 933.0, fill='#FFFFFF', outline='')
 
-    select_button_image = tk.PhotoImage(file='./resources/buttons/select_btn.png')
-    exit_button_image = tk.PhotoImage(file='./resources/buttons/exit_btn.png')
 
+    # Select (Button)
+    select_button_image = tk.PhotoImage(file='./resources/buttons/select_btn.png')
     select_button = tk.Button(
         master=window,
         image=select_button_image,
@@ -56,6 +55,10 @@ def main():
         relief='flat'
     )
 
+    select_button.place(x=780.0, y=544.0)
+
+    # Exit (Button)
+    exit_button_image = tk.PhotoImage(file='./resources/buttons/exit_btn.png')
     exit_button = tk.Button(
         master=window,
         image=exit_button_image,
@@ -65,17 +68,59 @@ def main():
         relief='flat'
     )
 
-    select_button.place(
-        x=753.0,
-        y=544.0
-    )
+    exit_button.place(x=960.0, y=786.0)
 
-    exit_button.place(
-        x=753.0,
-        y=686.0
-    )
+    # GENERATE QR (Label)
+    genImage = ImageTk.PhotoImage(Image.open('./resources/generateqr.png'))
+    generateLabel = tk.Label(master=window,
+                             background='#FFFFFF',
+                             image=genImage)
+    generateLabel.place(x=750, y=20, width=200, height=40)
 
-    # Welcome message
+    # READ QR (Label)
+    scanqrImage = ImageTk.PhotoImage(Image.open('./resources/readqr.png'))
+    scanqrLabel = tk.Label(master=window,
+                           background='#FFFFFF',
+                           image=scanqrImage)
+    scanqrLabel.place(x=740, y=400, width=200, height=40)
+
+    # Entry Box
+    inputText = tk.Text(
+                master=window,
+                height=10,
+                width=60,
+                relief=tk.GROOVE)
+    inputText.place(x=800, y=70)
+
+    # Submit Button
+    sbtn_img = ImageTk.PhotoImage(Image.open('./resources/buttons/submit.png'))
+    text_sub_btn = tk.Button(master=window, 
+                             image=sbtn_img,
+                             relief=tk.FLAT,
+                             highlightthickness=0,
+                             background='#FFFFFF',
+                             bd=0,
+                             command=lambda : print ('gotcha'))
+    text_sub_btn.place(x = 1060, y=300)
+
+    # Choose Location (Label)
+    choose_loc_img = ImageTk.PhotoImage(Image.open('./resources/buttons/chooseLoc.png'))
+    choose_loc_btn = tk.Button(
+                     master=window,
+                     image=choose_loc_img,
+                     relief=tk.FLAT,
+                     highlightthickness=0,
+                     background='#FFFFFF',
+                     bd=0,
+                     command=lambda : print ('gotcha'))
+    choose_loc_btn.place(x=840, y=300)
+    # Select File(Label)
+    sel_file_label = tk.Label(master=window, text='Select the QR Image', font=('Arial', 13), 
+                              background='#FFFFFF')
+    sel_file_label.place(x=780, y=500)
+
+
+    # Welcome message (Label)
     welcomeMessage = ImageTk.PhotoImage(Image.open('./resources/welcomeMessage.png'))
     welcome_label = tk.Label(
             master=window,
@@ -84,6 +129,18 @@ def main():
             image=welcomeMessage,
             background="#00EDA6")
     welcome_label.place(x = 50, y=100)
+
+    # About Me (Label)
+    tk.Label(master=window,
+             text='Kesavan M ',
+             background='#00EDA6',
+             fg='#FFFFFF',
+             font=('Arial', 14, 'bold')).place(x=100, y=700)
+    tk.Label(master=window, 
+             text='github/k7esavan',
+             background='#00EDA6',
+             fg='#FFFFFF',
+             font=('Arial', 14, 'bold')).place(x=100, y=730)
 
     window.mainloop()
 if __name__ == '__main__':
