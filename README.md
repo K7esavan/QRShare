@@ -9,8 +9,16 @@
 <li> Reads the QR Code and generates output DataFile </li>
 </ul>
 
-Not Completed Yet..
-
 ## UI 
 
-![QRShare](./resources/README/QRShareReadMe.png 'QRShare Initial UI')
+![QRShare](./resources/README/UI.png 'QRShare Initial UI')
+
+## GENERATE QR
+
+  Type you data in the Text box and submit it.<br>
+  this will create QR Code image in the selected folder
+
+## READ QR
+  
+  Select the QR image ('png', 'jpg' or 'jpeg' format) and an infomation
+  box pop up and display the data in that QR image.
