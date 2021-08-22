@@ -32,8 +32,9 @@ window = tk.Tk()
 window.title('QRShare')
 window.geometry('1395x933')
 window.configure(bg='#FFFFFF')
-logo = tk.PhotoImage('./resources/logo.ico')
-window.iconphoto(False, logo)
+
+#logo = tk.PhotoImage('./resources/logo.ico')
+#window.iconphoto(False, logo)
 window.resizable(False, False)
 
 canvas = tk.Canvas(
