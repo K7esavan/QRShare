@@ -25,12 +25,10 @@
 
 ## INSTALLATION
 
-#### Windows
-  Portable .exe file is located in ./EXE-Windows folder 
-
 #### From Source
   run the __init__.py file
 
   <pre>
-    python __init__.py
+    pip install -r requirements.txt
+    python qrshare.py
   </pre>
