@@ -26,8 +26,6 @@
 ## INSTALLATION
 
 #### From Source
-  run the __init__.py file
-
   <pre>
     pip install -r requirements.txt
     python qrshare.py
